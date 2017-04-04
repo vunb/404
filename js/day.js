@@ -15,70 +15,66 @@ var startIntervals;
 var intervalSetTime;
 var contentOpen = false;
 
-$(document).ready(function() {
-    
-  
-    function balloon(){
-        var el=$('.balloon');
-        if(el.hasClass('show')){
+$(document).ready(function () {
+
+    function balloon() {
+        var el = $('.balloon');
+        if (el.hasClass('show')) {
             el.removeClass('show').addClass('hide').removeClass('fadeInUp');
             el.addClass('animated fadeOutUp');
-        }else{
+        } else {
             el.removeClass('hide').addClass('show').removeClass('fadeOutUp');
             el.addClass('animated fadeInUp');
         }
-   
-        setTimeout(balloon,4000);
-    };            
+
+        setTimeout(balloon, 4000);
+    };
     balloon();
-           
-                                         
-	
-    $(function() {
-		
+
+    $(function () {
+
         $.preload(images, {
-            init: function(loaded, total) {
-                $("#indicator").html("<img src='images/load.gif' />");			
+            init: function (loaded, total) {
+                $("#indicator").html("<img src='images/load.gif' />");
             },
-			
-            loaded_all: function(loaded, total) { 
+
+            loaded_all: function (loaded, total) {
                 $('body').height($(window).height());
-                            
-                $('#indicator').fadeOut('slow', function() {
+
+                $('#indicator').fadeOut('slow', function () {
                     $('body').addClass('gradient');
-                                  
+
                     $('.clouds').pan({
-                        fps: 30, 
-                        speed: 1, 
-                        dir: 'left', 
+                        fps: 30,
+                        speed: 1,
+                        dir: 'left',
                         depth: 70
                     });
-                                
-                    $('.init').fadeIn(function(){
+
+                    $('.init').fadeIn(function () {
                         $(this).removeClass('init');
                         $('.sun').addClass('animated bounceInDown');
-                                      
-                                  setTimeout(function(){
-                                       $('.owl').plaxify({"xRange":10,"yRange":0}) 
-                                $('.grass').plaxify({"xRange":100})   
-                            $.plax.enable(); 
-                                  },1000)    
-                                      
-                                      
-                                       
+
+                        setTimeout(function () {
+                            $('.owl').plaxify({
+                                "xRange": 10,
+                                "yRange": 0
+                            })
+                            $('.grass').plaxify({
+                                "xRange": 100
+                            })
+                            $.plax.enable();
+                        }, 1000)
                     })
-                                         
-                                        
-                                        
-					
+
                 });
             }
         });
     });
- 
+
 
 })
 
-$(window).resize(function() {
+$(window).resize(function () {
     $('body').height($(window).height());
 });
