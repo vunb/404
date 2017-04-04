@@ -76,7 +76,7 @@ body {
     width: 150%;
     top: auto!important;
     height: 110px;
-    background: transparent url(../images/grass.png) repeat-x;
+    background: transparent url(../images/grass_day.png) repeat-x;
 }
 
 .owl {
@@ -87,7 +87,7 @@ body {
 }
 
 .balloon {
-    background-image: url(../images/balloon.png);
+    background-image: url(../images/balloon_day.png);
     width: 273px;
     height: 181px;
     background-repeat: no-repeat;
