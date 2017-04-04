@@ -3,11 +3,11 @@
 
 <head>
     <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><![endif]-->
     <title>Owl 404 Page</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Finger+Paint" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Finger+Paint" type="text/css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
 
